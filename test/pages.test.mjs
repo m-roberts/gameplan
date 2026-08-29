@@ -14,10 +14,10 @@ test('Pages site is generic, self-contained, and links to its public docs', asyn
     'Games Tonight',
     '/gameplan start',
     '/gameplan server',
-    'docs/quickstart.md',
-    'docs/discord-setup.md',
-    'docs/operations.md',
-    'docs/security-and-data.md',
+    'docs/quickstart/',
+    'docs/discord-setup/',
+    'docs/operations/',
+    'docs/security-and-data/',
     'https://github.com/m-roberts/gameplan',
   ]) assert.match(html, new RegExp(expected.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 

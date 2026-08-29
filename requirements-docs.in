@@ -1,0 +1,3 @@
+# Keep Material on the documented 9.x release line; requirements-docs.txt
+# records the exact reproducible build set.
+mkdocs-material==9.*
