@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GamePlan is a self-hosted, Discord-first planner for flexible Steam game nights.">
+  <meta name="theme-color" content="#10111a">
+  <meta property="og:title" content="GamePlan — Make game night happen">
+  <meta property="og:description" content="A self-hosted, Discord-first planner for flexible Steam game nights.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/gameplan-hero.png">
+  <title>GamePlan — Make game night happen</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-od-id="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="GamePlan home" data-od-id="brand-wordmark">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>GamePlan</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-od-id="mobile-menu-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#real-life">Real life</a>
+        <a href="#how">How it works</a>
+        <a href="#operators">Self-hosting</a>
+        <a href="#docs">Docs</a>
+      </nav>
+      <a class="github-link nav-github" href="https://github.com/m-roberts/gameplan" data-od-id="nav-github-link">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11.2 11.2 0 0 1 5.8 0C17 4.8 18 5.1 18 5.1c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.1v3.4c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" data-od-id="hero-section">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Open source · Discord-first</div>
+          <h1 data-od-id="hero-heading">Make game night <span>happen.</span></h1>
+          <p class="hero-lede">No Friday-night chat spiral. GamePlan turns “what should we play?” into a Game Night everyone can actually join—even when plans change.</p>
+          <a class="primary-cta" href="https://github.com/m-roberts/gameplan" data-od-id="hero-github-cta">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11.2 11.2 0 0 1 5.8 0C17 4.8 18 5.1 18 5.1c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.1v3.4c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+            View GamePlan on GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+          <p class="hero-note">Self-hosted · Docker Compose · MIT licensed</p>
+        </div>
+
+        <div class="hero-art reveal" data-od-id="hero-artwork">
+          <div class="art-orbit" aria-hidden="true"></div>
+          <img src="assets/gameplan-hero.png" alt="Friendly GamePlan robot holding a controller and game-night flag, surrounded by connected players and planning icons" width="1254" height="1254">
+          <div class="signal-card signal-one" aria-hidden="true">
+            <span class="signal-icon">✓</span>
+            <span><small>Game Night</small><strong>Plan confirmed</strong></span>
+          </div>
+          <div class="signal-card signal-two" aria-hidden="true">
+            <span class="live-pulse"></span>
+            <span><small>Games Tonight</small><strong>Roster updated</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section feature-story" data-od-id="feature-story-section">
+      <div class="section-intro reveal">
+        <p class="kicker">Plan where your group already talks</p>
+        <h2 data-od-id="feature-story-heading">From a shared Steam library to a plan in Discord.</h2>
+        <p>GamePlan handles the awkward coordination work without pulling the group into another place.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card discord-card reveal" data-od-id="feature-card-discord">
+          <div class="card-index">01</div>
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 8.8c1.3-.6 2.7-.9 4-.9s2.7.3 4 .9M8.8 15.5c2.1 1.4 4.3 1.4 6.4 0M9.2 12h.1m5.4 0h.1M6.2 18.1l-1.4 1.1c-.7-2.7-1-5.8-.4-8.8C5.7 8.7 7.1 7.6 8.8 7l.7 1.1M17.8 18.1l1.4 1.1c.7-2.7 1-5.8.4-8.8-1.3-1.7-2.7-2.8-4.4-3.4l-.7 1.1"/></svg>
+          </div>
+          <h3>Discord-first planning</h3>
+          <p>Start with <code>/gameplan start</code>. Choose a game directly, open a Game Vote, or build from a voice channel already in progress.</p>
+        </article>
+
+        <article class="feature-card steam-card reveal" data-od-id="feature-card-steam">
+          <div class="card-index">02</div>
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="15.5" cy="8.5" r="3.2"/><circle cx="7" cy="16.5" r="2"/><path d="m8.8 15.7 4-3.8m-7.7 3.8-2.3-.9m5.9 2.6 4.4 1.8a3 3 0 0 0 3.8-1.7l1.2-3"/></svg>
+          </div>
+          <h3>Steam compatibility</h3>
+          <p>Players link a public Steam library through a private, one-time browser link. GamePlan finds games the group can play together—no Steam password involved.</p>
+        </article>
+
+        <article class="feature-card feed-card reveal" data-od-id="feature-card-session-feed">
+          <div class="card-index">03</div>
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 4.5h14v11H9l-4 4v-15Z"/><path d="M8.5 8.5h7m-7 3h5"/></svg>
+          </div>
+          <h3>One useful Session Feed</h3>
+          <p>Confirmed Game Nights land in a dedicated Session Feed. Each plan gets its own thread for RSVPs, changes, and the conversation that belongs with it.</p>
+        </article>
+      </div>
+
+      <div class="session-preview reveal" data-od-id="session-feed-preview">
+        <div class="discord-rail" aria-hidden="true">
+          <span class="rail-logo">G</span><span></span><span></span><span></span>
+        </div>
+        <div class="discord-channels" aria-hidden="true">
+          <div class="mini-brand"><i></i>GAMEPLAN HQ</div>
+          <small>GAME NIGHTS</small>
+          <div># general</div>
+          <div class="active"># session-feed</div>
+          <div># looking-for-group</div>
+        </div>
+        <div class="discord-feed">
+          <div class="feed-topbar"><strong># session-feed</strong><span>Game Nights, without the scrollback</span></div>
+          <article class="plan-message">
+            <div class="bot-avatar">GP</div>
+            <div class="message-body">
+              <div class="message-meta"><strong>GamePlan</strong><b>BOT</b><span>Today at 18:04</span></div>
+              <div class="game-night-embed">
+                <div class="embed-head"><span class="status-dot"></span><span>GAME NIGHT CONFIRMED</span></div>
+                <div class="embed-title">Friday co-op</div>
+                <div class="embed-game"><span class="game-tile">DRG</span><span><strong>Deep Rock Galactic</strong><small>Chosen from the group’s compatible games</small></span></div>
+                <div class="embed-meta"><span><small>STARTS</small>20:00 Friday</span><span><small>PLAYERS</small>4 ready · 1 later</span></div>
+              </div>
+              <div class="thread-line"><span aria-hidden="true">↳</span><strong>Friday co-op discussion</strong><span>8 messages</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="real-life" class="section real-life" data-od-id="real-life-section">
+      <div class="section-intro reveal">
+        <p class="kicker orange">Built for real life</p>
+        <h2 data-od-id="real-life-heading">The plan can bend without breaking.</h2>
+        <p>Game night is rarely a clean two-hour block with everyone arriving together. GamePlan keeps the shared plan useful as the evening moves.</p>
+      </div>
+
+      <div class="life-layout">
+        <div class="life-list">
+          <article class="life-item reveal" data-od-id="life-regular-nights">
+            <span class="life-number">01</span>
+            <div><h3>Regular Game Nights</h3><p>Set up a repeating rhythm for the group, then let each actual Game Night become its own concrete plan.</p></div>
+          </article>
+          <article class="life-item reveal" data-od-id="life-flexible-roster">
+            <span class="life-number">02</span>
+            <div><h3>Late joiners. Early drops.</h3><p>Capture when people can arrive and when they need to leave, so the roster reflects the night you really have.</p></div>
+          </article>
+          <article class="life-item reveal" data-od-id="life-multi-game">
+            <span class="life-number">03</span>
+            <div><h3>More than one game</h3><p>Plan multiple games in one session instead of pretending the group will want the same thing all evening.</p></div>
+          </article>
+          <article class="life-item reveal" data-od-id="life-games-tonight">
+            <span class="life-number">04</span>
+            <div><h3>Games Tonight stays current</h3><p>When the live roster or game choice changes, opted-in players get a useful notification—never an <code>@everyone</code> blast.</p></div>
+          </article>
+        </div>
+
+        <div class="night-board reveal" data-od-id="games-tonight-preview">
+          <div class="board-head"><span><i></i> GAMES TONIGHT</span><small>LIVE · FRI 20:24</small></div>
+          <div class="board-title"><span>Friday co-op</span><b>In progress</b></div>
+          <div class="timeline">
+            <div class="timeline-track"><span class="now-marker"></span></div>
+            <div class="time-labels"><span>20:00</span><span>21:00</span><span>22:00</span></div>
+          </div>
+          <div class="roster-row"><span class="avatar blue">M</span><strong>Mike</strong><span class="availability full">all night</span></div>
+          <div class="roster-row"><span class="avatar purple">A</span><strong>Alex</strong><span class="availability late">joins 21:00</span></div>
+          <div class="roster-row"><span class="avatar orange">R</span><strong>Riley</strong><span class="availability early">leaves 22:00</span></div>
+          <div class="board-change"><span class="live-pulse"></span><span><strong>Plan updated</strong><small>Second game moved to 21:15 for the live roster.</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section how" data-od-id="how-it-works-section">
+      <div class="section-intro compact reveal">
+        <p class="kicker">How it works</p>
+        <h2 data-od-id="how-it-works-heading">Your server. Your bot. Your Game Night.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal" data-od-id="step-self-host">
+          <div class="step-top"><span>01</span><div class="step-glyph server-glyph" aria-hidden="true"><i></i><i></i><i></i></div></div>
+          <h3>Self-host GamePlan</h3>
+          <p>Run the Docker Compose stack on an always-on machine behind public HTTPS.</p>
+        </li>
+        <li class="step reveal" data-od-id="step-install-bot">
+          <div class="step-top"><span>02</span><div class="step-glyph bot-glyph" aria-hidden="true"><i></i><i></i></div></div>
+          <h3>Install the Discord bot</h3>
+          <p>Create your Discord application, grant only the permissions it needs, and choose the Session Feed with <code>/gameplan server</code>.</p>
+        </li>
+        <li class="step reveal" data-od-id="step-plan-night">
+          <div class="step-top"><span>03</span><div class="step-glyph plan-glyph" aria-hidden="true"><i></i></div></div>
+          <h3>Plan a Game Night</h3>
+          <p>Run <code>/gameplan start</code>, compare compatible games or open a Game Vote, then publish the plan.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="operators" class="section operators" data-od-id="operator-section">
+      <div class="operator-grid">
+        <div class="operator-copy reveal">
+          <p class="kicker">Self-hosting</p>
+          <h2 data-od-id="operator-heading">Small stack.<br>Clear responsibilities.</h2>
+          <p>GamePlan is built for operators who want control without building a platform around it. A modest always-on machine is enough for an initial community.</p>
+          <p>Use a home server with a reliable public route, a managed container platform, or an inexpensive VPS—Hetzner is one example. GamePlan depends on none of them.</p>
+        </div>
+        <div class="stack-map reveal" data-od-id="hosting-stack-diagram">
+          <div class="stack-node internet"><span>01</span><div><small>PUBLIC EDGE</small><strong>DNS + HTTPS</strong><p>Caddy, Nginx, Traefik, or equivalent</p></div></div>
+          <div class="stack-connector"><i></i><span>valid TLS</span></div>
+          <div class="stack-node compose"><span>02</span><div><small>ALWAYS-ON MACHINE</small><strong>Docker Compose</strong><p>App · notification worker · migrations</p></div></div>
+          <div class="stack-connector"><i></i><span>private network</span></div>
+          <div class="stack-node database"><span>03</span><div><small>PERSISTENT STATE</small><strong>PostgreSQL</strong><p>Back up the volume; never expose port 5432</p></div></div>
+        </div>
+      </div>
+      <div class="operator-notes reveal">
+        <div><span class="note-dot blue"></span><strong>Public HTTPS</strong><p>Discord must reach the interactions endpoint and players must open one-time browser links.</p></div>
+        <div><span class="note-dot purple"></span><strong>Health and updates</strong><p>Monitor <code>/healthz</code>, container restarts, disk space, and backup failures.</p></div>
+        <div><span class="note-dot orange"></span><strong>Backups that restore</strong><p>Keep encrypted PostgreSQL backups away from the host and rehearse recovery.</p></div>
+      </div>
+    </section>
+
+    <section class="section permissions" data-od-id="permissions-section">
+      <div class="permission-copy reveal">
+        <p class="kicker orange">Discord permissions &amp; privacy</p>
+        <h2 data-od-id="permissions-heading">Enough access to coordinate. No more.</h2>
+        <p>The bot needs to see and post in selected channels, create and use public threads, embed links, and read message history. It needs Server Members Intent to keep membership current.</p>
+        <div class="privacy-callout"><span aria-hidden="true">✓</span><p><strong>No Administrator permission.</strong> No Message Content or Presence Intent.</p></div>
+      </div>
+      <div class="permission-list reveal" data-od-id="permission-list">
+        <div><span>View Channels</span><b>required</b></div>
+        <div><span>Send Messages + Threads</span><b>required</b></div>
+        <div><span>Embed Links</span><b>required</b></div>
+        <div><span>Create Public Threads</span><b>required</b></div>
+        <div><span>Read Message History</span><b>required</b></div>
+        <div class="denied"><span>Administrator</span><b>not needed</b></div>
+      </div>
+      <div class="data-strip reveal">
+        <strong>Private by design</strong>
+        <p>GamePlan stores Discord IDs, optional display names, Steam IDs, ownership snapshots, and planning data in your PostgreSQL database. It never receives Steam passwords or launcher credentials. One-time browser links expire after ten minutes and can be used once.</p>
+      </div>
+    </section>
+
+    <section id="docs" class="section docs" data-od-id="documentation-section">
+      <div class="section-intro compact reveal">
+        <p class="kicker">Documentation</p>
+        <h2 data-od-id="documentation-heading">Start with the path you need.</h2>
+      </div>
+      <div class="doc-grid">
+        <a class="doc-card reveal" href="docs/quickstart.md" data-od-id="doc-quickstart">
+          <span class="doc-type">START HERE</span><h3>Quick start</h3><p>Configure the environment, start Compose, register the command, and choose a Session Feed.</p><span class="doc-link">Read quickstart <b>→</b></span>
+        </a>
+        <a class="doc-card reveal" href="docs/discord-setup.md" data-od-id="doc-discord-setup">
+          <span class="doc-type">DISCORD</span><h3>Bot setup</h3><p>Create the application, configure HTTPS interactions, and grant the minimum permissions.</p><span class="doc-link">Read bot setup <b>→</b></span>
+        </a>
+        <a class="doc-card reveal" href="docs/operations.md" data-od-id="doc-operations">
+          <span class="doc-type">OPERATE</span><h3>Operations guide</h3><p>Cover health checks, backups, updates, rollbacks, and incident handling.</p><span class="doc-link">Read operations <b>→</b></span>
+        </a>
+        <a class="doc-card reveal" href="docs/security-and-data.md" data-od-id="doc-security">
+          <span class="doc-type">TRUST</span><h3>Security &amp; data</h3><p>Understand stored data, protected tokens, browser sessions, and deletion paths.</p><span class="doc-link">Read security guide <b>→</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq" data-od-id="faq-section">
+      <div class="section-intro compact reveal">
+        <p class="kicker">FAQ</p>
+        <h2 data-od-id="faq-heading">Good questions, straight answers.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="reveal" data-od-id="faq-hosting">
+          <summary>Does GamePlan host anything for me?<span></span></summary>
+          <p>No. GamePlan is a self-hosted open-source project. You choose the machine, domain, HTTPS setup, and backup approach.</p>
+        </details>
+        <details class="reveal" data-od-id="faq-steam-password">
+          <summary>Does it need my Steam password?<span></span></summary>
+          <p>No. Steam OpenID proves the player’s Steam ID, and the Steam Web API reads a public library. GamePlan never asks for a Steam password, session cookie, or launcher credential.</p>
+        </details>
+        <details class="reveal" data-od-id="faq-public-library">
+          <summary>Why does my Steam library need to be public?<span></span></summary>
+          <p>Steam must be allowed to report ownership for GamePlan to compare compatible games. Profile and game details need to be public for that comparison to work.</p>
+        </details>
+        <details class="reveal" data-od-id="faq-changing-plans">
+          <summary>What happens when plans change mid-session?<span></span></summary>
+          <p>The host can update the live roster or replan for it. GamePlan records the change in the discussion and can notify opted-in players through their selected notification route.</p>
+        </details>
+        <details class="reveal" data-od-id="faq-large-server">
+          <summary>Will it ping the whole server?<span></span></summary>
+          <p>No. Games Tonight updates never use <code>@everyone</code> or <code>@here</code>. Players choose whether notifications are off, sent by DM, posted to the thread, or both.</p>
+        </details>
+        <details class="reveal" data-od-id="faq-license">
+          <summary>Can I modify it?<span></span></summary>
+          <p>Yes. GamePlan and its repository artwork are available under the MIT License.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-section" data-od-id="final-github-section">
+      <div class="final-glow" aria-hidden="true"></div>
+      <div class="final-copy reveal">
+        <p class="kicker">Friday is closer than it looks</p>
+        <h2>Give game night<br>a fighting chance.</h2>
+        <p>Run GamePlan on infrastructure you control and keep the plan where the group already is.</p>
+        <a class="primary-cta" href="https://github.com/m-roberts/gameplan" data-od-id="final-github-cta">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.1 0 0 1-.3 3.2 1.2a11.2 11.2 0 0 1 5.8 0C17 4.8 18 5.1 18 5.1c.6 1.5.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.1v3.4c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg>
+          Explore GamePlan on GitHub
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <img src="assets/gameplan-hero.png" alt="" aria-hidden="true" width="1254" height="1254">
+    </section>
+  </main>
+
+  <footer class="site-footer" data-od-id="site-footer">
+    <a class="brand" href="#top" aria-label="GamePlan home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>GamePlan</span></a>
+    <p>Self-hosted. Discord-first. Built for game night.</p>
+    <div><span>MIT License</span><a href="https://github.com/m-roberts/gameplan">GitHub ↗</a></div>
+  </footer>
+</body>
+</html>
