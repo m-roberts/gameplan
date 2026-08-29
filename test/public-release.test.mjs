@@ -30,3 +30,13 @@ test('README artwork is included in the repository', async () => {
   const artwork = await stat(new URL('docs/assets/gameplan-hero.png', root));
   assert.ok(artwork.size > 0);
 });
+
+test('shared GamePlan artwork is an alpha PNG used consistently by Pages', async () => {
+  const [documentationArtwork, pagesArtwork] = await Promise.all([
+    readFile(new URL('docs/assets/gameplan-hero.png', root)),
+    readFile(new URL('site/assets/gameplan-hero.png', root)),
+  ]);
+
+  assert.equal(documentationArtwork[25], 6, 'PNG colour type 6 is RGBA');
+  assert.deepEqual(pagesArtwork, documentationArtwork);
+});
