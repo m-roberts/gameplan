@@ -34,4 +34,9 @@ jobs:
       - run: npm run test:migrations
         env:
           MIGRATION_TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --requirement requirements-docs.txt
+      - run: mkdocs build --strict --site-dir /tmp/gameplan-docs
       - run: docker build --tag gameplan:test .

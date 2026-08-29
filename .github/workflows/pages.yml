@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - site/**
+      - docs/**
+      - mkdocs.yml
+      - requirements-docs.in
+      - requirements-docs.txt
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -25,9 +29,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --requirement requirements-docs.txt
+      - run: |
+          mkdir -p _pages
+          cp --recursive site/. _pages/
+          mkdocs build --strict --site-dir _pages/docs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: _pages
       - id: deployment
         uses: actions/deploy-pages@v4
