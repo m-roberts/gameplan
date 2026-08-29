@@ -1,0 +1,21 @@
+export const command = {
+  name: 'gameplan',
+  description: 'Plan a Steam game night with your Discord group',
+  type: 1,
+  options: [
+    { type: 1, name: 'start', description: 'Start planning a game night' },
+    { type: 1, name: 'invite', description: 'Post a GamePlan start card in this channel' },
+    { type: 1, name: 'server', description: 'Choose this server’s Session Feed' },
+    { type: 1, name: 'me', description: 'Show your Steam and notification status' },
+    { type: 1, name: 'group', description: 'View the Discord group and Steam ownership' },
+    { type: 1, name: 'games', description: 'Show this server’s game settings status' },
+    { type: 1, name: 'sync', description: 'Sync your linked Steam library' },
+    { type: 1, name: 'sessions', description: 'View your upcoming sessions in this server' },
+    { type: 1, name: 'regular', description: 'Make or manage regular Game Nights' },
+    { type: 1, name: 'tonight', description: 'View Games Tonight for your Game Nights' },
+    { type: 1, name: 'feedback', description: 'Share feedback with this GamePlan deployment' },
+    { type: 1, name: 'feedback-notifications', description: 'Choose feedback notification preferences' },
+    { type: 1, name: 'notifications', description: 'Choose GamePlan notification preferences' },
+    { type: 1, name: 'help', description: 'Learn how GamePlan works' },
+  ],
+};

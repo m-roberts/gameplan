@@ -1,0 +1,69 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-gameplan}
+      POSTGRES_USER: ${POSTGRES_USER:-gameplan}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - gameplan_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  migrate:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://gameplan:${POSTGRES_PASSWORD}@db:5432/gameplan}
+    command: ["npm", "run", "migrate"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  app:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://gameplan:${POSTGRES_PASSWORD}@db:5432/gameplan}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:?Set PUBLIC_BASE_URL in .env}
+      APP_SECRET: ${APP_SECRET:?Set APP_SECRET in .env}
+      STEAM_WEB_API_KEY: ${STEAM_WEB_API_KEY:?Set STEAM_WEB_API_KEY in .env}
+      DISCORD_PUBLIC_KEY: ${DISCORD_PUBLIC_KEY:?Set DISCORD_PUBLIC_KEY in .env}
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN:?Set DISCORD_BOT_TOKEN in .env}
+    ports:
+      - "${HOST_PORT:-3000}:3000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/healthz').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  notifications:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://gameplan:${POSTGRES_PASSWORD}@db:5432/gameplan}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:?Set PUBLIC_BASE_URL in .env}
+      APP_SECRET: ${APP_SECRET:?Set APP_SECRET in .env}
+      STEAM_WEB_API_KEY: ${STEAM_WEB_API_KEY:?Set STEAM_WEB_API_KEY in .env}
+      DISCORD_PUBLIC_KEY: ${DISCORD_PUBLIC_KEY:?Set DISCORD_PUBLIC_KEY in .env}
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN:?Set DISCORD_BOT_TOKEN in .env}
+    command: ["node", "src/notification-worker.mjs"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+volumes:
+  gameplan_postgres_data:

@@ -1,0 +1,6 @@
+[
+  { "appId": 620, "canonicalTitle": "Portal 2", "minPlayers": 2, "maxPlayers": 2, "policyNote": "Co-op campaign supports exactly two players." },
+  { "appId": 252950, "canonicalTitle": "Rocket League", "minPlayers": 2, "maxPlayers": 8, "policyNote": "Private matches support several team sizes." },
+  { "appId": 548430, "canonicalTitle": "Deep Rock Galactic", "minPlayers": 1, "maxPlayers": 4, "policyNote": "One shared squad supports up to four players." },
+  { "appId": 553850, "canonicalTitle": "HELLDIVERS 2", "minPlayers": 1, "maxPlayers": 4, "policyNote": "One squad supports up to four players." }
+]

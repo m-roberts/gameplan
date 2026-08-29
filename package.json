@@ -1,0 +1,20 @@
+{
+  "name": "gameplan",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "migrate": "node scripts/migrate.mjs",
+    "test": "for file in src/*.mjs; do node --check \"$file\"; done && node --test",
+    "test:migrations": "node scripts/verify-migrations.mjs",
+    "register-command": "node scripts/register-command.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
