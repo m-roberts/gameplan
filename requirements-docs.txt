@@ -4,16 +4,14 @@ babel==2.18.0
     # via mkdocs-material
 backrefs==8.0
     # via mkdocs-material
-certifi==2026.7.22
+certifi==2026.10.18
     # via requests
 charset-normalizer==3.5.1
     # via requests
 click==8.5.0
     # via mkdocs
 colorama==0.4.6
-    # via
-    #   mkdocs
-    #   mkdocs-material
+    # via mkdocs-material
 ghp-import==2.1.0
     # via mkdocs
 idna==3.19
